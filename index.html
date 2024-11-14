@@ -35,7 +35,7 @@
                 <a class="nav-link" href="#whattodo">How You Can Help</a>
                 </li>
                 <li>
-                    <a class="btn btn-outline-success" id="get-help" href="#contact">Get Help</a>
+                    <a class="btn btn-outline-success nav-btn" id="get-help" href="#contact">Get Help</a>
                 </li>
             </ul>
         </div>
@@ -172,7 +172,7 @@
     <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
 <script>
     document
-        .querySelectorAll(".navbar-collapse .nav-link")
+        .querySelectorAll(".navbar-collapse .nav-link .nav-btn")
         .forEach((link) => {
             link.addEventListener("click", function (e) {
                 let section = document.querySelector(e.target.getAttribute("href"));
