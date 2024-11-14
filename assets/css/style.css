@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*  Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CSS Variables */
+:root {
+    --primary-font: 'Dongle', sans-serif;
+    --secondary-font: 'Kanit', Monospace;
+    --white: #F7EBE8;
+    --black: #272727;
+    --teal: #22AAA1;
+    --red: #FDE467;
+    --mint: #55FF99;
+
+}
+
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    color: var(--black);
+    background-color: #1A7770;
+}
+
+
+
+h1, h2, h3 {
+    font-family: var(--secondary-font)
+}
+
+
+
+/* Specific styles */
+
+nav {
+    box-shadow: 0 2px 4px #646464;
+    background-color: var(--white);
+    font-size: 150%;
+}
+
+header {
+    border-radius: 30px;
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+header p, footer p {
+    letter-spacing: 1px;
+}
+
+#hero {
+    background: url(../images/hands-holding-each-other-support.webp) no-repeat center center / cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+    min-height: 400px;
+}
+
+#maincontent {
+    border-radius: 30px;
+    background-color: lightgray;
+    color: var(--black);
+    text-align: center;
+
+}
+
+#thesigns, #whattodo {
+    display: flex;
+    flex-direction: column;
+}
+
+#thesigns li, #whattodo li {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+#thesigns li::after {
+        content: '';
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        vertical-align: middle;
+        background-image: url(../images/favicons/favicon-96x96.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 0.5rem;
+}
+
+#whattodo li::before {
+    content: '';
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    background-image: url(../images/favicons/favicon-96x96.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+}
+
+#thesigns li::before {
+    content: '';
+    display: none;
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    background-image: url(../images/favicons/favicon-96x96.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+}
+
+#thesigns {
+    background-color: var(--red);
+    border-radius: 30px 0 0 30px;
+    
+    text-align: right;
+    list-style-position: inside;
+}
+
+#whattodo {
+    background-color: var(--mint);
+    border-radius: 0 30px 30px 0;
+}
+
+#thesigns img, #whattodo img {
+    max-height: 10rem;
+    max-width: 10rem;
+    align-self: center;
+    margin-top: auto;
+}
+
+p, main li, #contact form {
+    font-size: 190%;
+    line-height: 90%;
+}
+
+#contact select, #contact input, #contact textarea {
+    font-size: 100%;
+    line-height: 80%;
+}
+
+footer {
+    border-radius: 30px 30px 0 0;
+    border-top: 8px solid var(--teal);
+    border-left: 8px solid var(--teal);
+    border-right: 8px solid var(--teal);
+    padding: 30px;
+    background-color: var(--white);
+}
+
+#immediate {
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+}
+
+#get-help, #submit-get-help {
+    font-size: inherit;
+}
+
+.socialinitial {
+    font-size: initial;
+}
+
+#socials {
+    list-style-type: none;
+    font-size: 2.5rem;
+    gap: 10px;
+}
+
+#socials a {
+    color: var(--black);
+}
+
+#socials i:hover {
+    color: var(--teal);
+    transition: color 0.1s ease-in-out;
+}
+
+/* Thank you  page*/
+
+#thankyou-container {
+    background-color: var(--white);
+    border-radius: 30px;
+}
+
+#respond {
+    color: var(--teal);
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    #maincontent {
+        text-align: left;
+    }
+
+    #thesigns {
+        text-align: left;
+        list-style-position: outside;
+    }
+
+    #thesigns li::after {
+        display: none;
+}
+
+    #thesigns li::before {
+    display: inline-block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #hero {
+        background-image: url(../images/couple-holding-hands-waiting-area-airport-terminal.webp);
+    }  
+}
+
+@media screen and (min-width: 1200px) {
+    #thesigns, #whattodo {
+        border-radius: 30px;
+        margin-left: auto;
+        margin-left: auto;
+    }
+
+    #thesigns >h3 , #whattodo > h3 {
+        text-align: center;
+    }
+    
+}
