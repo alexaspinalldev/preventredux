@@ -101,6 +101,7 @@ header img {
 #thesigns, #whattodo {
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 8px #3b3b3b;
 }
 
 #thesigns li, #whattodo li {
@@ -157,11 +158,22 @@ header img {
     border-radius: 0 30px 30px 0;
 }
 
-#thesigns img, #whattodo img {
-    max-height: 10rem;
-    max-width: 10rem;
-    align-self: center;
+#troubledyouth , #gettinghelp {
+    height:300px;
+    min-width: 100%;
+    object-fit: cover;
     margin-top: auto;
+}
+
+#troubledyouth {
+    border-radius: 0 0 0 30px;
+    object-position: 0 0;
+}
+
+#gettinghelp {
+    border-radius: 0 0 30px 0;
+    object-position: 0 15%;
+
 }
 
 p, main li, #contact form {
@@ -248,10 +260,23 @@ footer {
         border-radius: 30px;
         margin-left: auto;
         margin-left: auto;
+        width: 47%;
     }
 
     #thesigns >h3 , #whattodo > h3 {
         text-align: center;
     }
     
+    #troubledyouth {
+        border-radius: 0 0 30px 30px;
+        height:400px;
+
+    
+    }
+    
+    #gettinghelp {
+        border-radius: 0 0 30px 30px;
+        height:400px;
+
+    }
 }
