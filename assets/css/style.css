@@ -232,8 +232,8 @@ footer {
     }
 
     #thesigns {
-        text-align: left;
         list-style-position: outside;
+        text-align: left;
     }
 
     #thesigns li {
