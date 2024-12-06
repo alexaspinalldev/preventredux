@@ -16,7 +16,7 @@
     --white: #F7EBE8;
     --black: #272727;
     --teal: #2d9abb;
-    /* --teal: #22AAA1; */
+    --dark-teal: #1a6877;
     --red: #FDE467;
     --mint: #55FF99;
 
@@ -26,9 +26,10 @@
 body {
     font-family: var(--primary-font);
     color: var(--black);
-    background-color: #1a6877;
+    /* background-color: var(--teal); */
+    background: #bff0ff;
+    /* background: linear-gradient(0deg, var()) 0%, rgba(45,154,187,1) 100%);} */
 }
-
 
 
 h1, h2, h3 {
@@ -48,7 +49,7 @@ nav {
 /* Header */
 header {
     border-radius: 30px;
-    background-color: var(--teal);
+    background-color: var(--dark-teal);
     color: var(--white);
     z-index: 1;
     box-shadow: 0 2px 4px #646464;
@@ -91,7 +92,9 @@ header img {
 
 #maincontent {
     border-radius: 0 0 30px 30px;
+    border: 8px solid var(--dark-teal);
     background-color: var(--white);
+    box-shadow: 0 2px 4px #646464;
     color: var(--black);
     text-align: center;
     position: relative;
@@ -106,7 +109,7 @@ header img {
 
 #thesigns li, #whattodo li {
     list-style-type: none;
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
 }
 
 /* #thesigns li::after {
@@ -177,10 +180,7 @@ p, main li, #contact form {
 }
 
 footer {
-    border-radius: 30px 30px 0 0;
-    border-top: 8px solid var(--teal);
-    border-left: 8px solid var(--teal);
-    border-right: 8px solid var(--teal);
+    border-top: 8px solid var(--dark-teal);
     padding: 30px;
     background-color: var(--white);
 }
@@ -195,14 +195,28 @@ footer {
     font-size: inherit;
 }
 
-.socialinitial {
-    font-size: initial;
+#socialcont {
+    background-color: var(--dark-teal);
+    padding: 10px;
 }
 
 #socials {
+    width: 100%;
+    height: min-content;
+}
+
+#socials h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--black);
+}
+
+#socials ul, #socials a {
     list-style-type: none;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 #socials a {
@@ -227,9 +241,6 @@ footer {
 
 /* Media queries */
 @media screen and (min-width: 768px) {
-    #maincontent {
-        text-align: left;
-    }
 
     #thesigns {
         list-style-position: outside;
@@ -247,6 +258,10 @@ footer {
 
     #thesigns li::before {
     display: inline-block;
+    }
+
+    #socials {
+        width: 60%;
     }
 }
 
